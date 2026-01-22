@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/oneplus/sm8750-common
+COMMON_PATH := device/oneplus/sm8850-common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -95,7 +95,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
-TARGET_KERNEL_SOURCE := kernel/oneplus/sm8750
+TARGET_KERNEL_SOURCE := kernel/oneplus/sm8850
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y
 TARGET_KERNEL_CONFIG := \
@@ -118,7 +118,7 @@ SYSTEM_KERNEL_MODULES := \
     $(BOARD_SYSTEM_KERNEL_MODULES_LOAD) \
     $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.kunit))
 
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/oneplus/sm8750-modules
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/oneplus/sm8850-modules
 TARGET_KERNEL_EXT_MODULES := \
     oplus/kernel/device_info/oplus_fpga/fpga_monitor:kbuild \
     qcom/opensource/mmrm-driver \
@@ -280,4 +280,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/sm8750-common/BoardConfigVendor.mk
+include vendor/oneplus/sm8850-common/BoardConfigVendor.mk
