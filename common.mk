@@ -72,7 +72,7 @@ PRODUCT_PACKAGES += \
     libreverbaidl \
     libvisualizeraidl
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8750/audio/primary-hal
+AUDIO_HAL_DIR := hardware/qcom-caf/sm8850/audio/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/sun
 CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../pal/configs/sun
 
@@ -242,7 +242,7 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 PRODUCT_ENABLE_UFFD_GC := true
 
 PRODUCT_COPY_FILES += \
-    kernel/oneplus/sm8750/modules.systemdlkm_blocklist.msm.sun:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
+    kernel/oneplus/sm8850/modules.systemdlkm_blocklist.msm.sun:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -532,4 +532,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/sm8750-common/sm8750-common-vendor.mk)
+$(call inherit-product, vendor/oneplus/sm8850-common/sm8850-common-vendor.mk)
