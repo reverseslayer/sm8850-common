@@ -46,10 +46,8 @@ PRODUCT_PACKAGES += \
     libagmipcservice \
     libaudiochargerlistener \
     libbatterylistener \
-    libcustomva_intf \
     libfmpal \
     libhfp_pal \
-    libhotword_intf \
     libmediautils_vendor.vendor \
     libmemunreachable.vendor \
     libpaleventnotifier \
@@ -60,7 +58,6 @@ PRODUCT_PACKAGES += \
     libsndcardparser \
     libsoundtriggerhal.qti \
     libvolumelistener \
-    libvui_intf \
     qtiaudiohalvendorextn
 
 PRODUCT_PACKAGES += \
