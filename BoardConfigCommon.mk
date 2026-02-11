@@ -80,7 +80,8 @@ BOARD_BOOTCONFIG := \
     androidboot.memcg=1 \
     androidboot.serialconsole=0 \
     androidboot.usbcontroller=a600000.dwc3 \
-    androidboot.vendor.qspa=true
+    androidboot.vendor.qspa=true \
+    androidboot.selinux=permissive
 
 BOARD_KERNEL_CMDLINE := \
     console=ttynull \
@@ -176,7 +177,7 @@ TARGET_KERNEL_EXT_MODULES += \
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := infiniti
+TARGET_BOARD_PLATFORM := sm8850
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -187,7 +188,7 @@ BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 233871900672
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 234689196032
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
@@ -223,8 +224,8 @@ BOOT_SECURITY_PATCH := 2025-12-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
-include hardware/oplus/sepolicy/qti/SEPolicy.mk
+#include device/qcom/sepolicy_vndr/SEPolicy.mk
+#include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

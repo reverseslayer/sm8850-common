@@ -132,13 +132,11 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     libfilefinder \
     mapper.qti \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.display.snapalloc-impl
 
 PRODUCT_COPY_FILES += \
@@ -203,8 +201,7 @@ PRODUCT_COPY_FILES += \
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml \
-    IPACM_Filter_cfg.xml
+    IPACM_cfg.xml
 endif
 
 # IR
